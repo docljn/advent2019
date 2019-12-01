@@ -23,4 +23,8 @@ RSpec.describe FuelCounterUpper do
   it "returns 4 when given 12 and 14" do
     expect(counter.total_fuel([12, 14])).to eq 4
   end
+
+  it "returns an answer when given a file" do
+    expect(counter.from_file('./spec/module_masses.csv')).to be(0)
+  end
 end
