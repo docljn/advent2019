@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/fuel_counter_upper'
 
 RSpec.describe FuelCounterUpper do

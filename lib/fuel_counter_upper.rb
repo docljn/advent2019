@@ -1,10 +1,10 @@
-# 
+# frozen_string_literal: true
+
 require 'csv'
 require 'pry'
 require 'pry-byebug'
 
 class FuelCounterUpper
-
   def from_file(file_path)
     rows = read_file(file_path)
     array = rows.flatten
