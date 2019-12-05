@@ -27,4 +27,10 @@ RSpec.describe Wire do
     expect(wire.path).to eq([[0,0],[0,1],[0,2],[0,1],[0,0]])
     expect(wire.points).to eq([[0,0],[0,1],[0,2]])
   end
+
+  it "calculates the number of steps to a given point on the path" do
+    wire = Wire.new(['U2', 'R2'])
+    expect(wire.steps_to([0,0])).to eq(0])
+    expect(wire.steps_to([1,2])).to eq(3)
+  end
 end

@@ -27,6 +27,10 @@ class Wire
     @instructions ||= route.map { |element| Instruction.new(element) }
   end
 
+  def steps_to(point)
+    path.find_index(point)
+  end
+
   private
 
   attr_reader :route
